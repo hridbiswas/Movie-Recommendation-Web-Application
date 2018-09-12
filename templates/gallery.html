@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+img{
+width:220px;
+height: 300px;
+
+
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<center><h1> <span style="color:red">Choose What You Like</span> </h1></center>
+<hr>
+<hr>
+<table class=move_gallery bgcolor="gray" style="width:100%" >
+    <tr>
+        <td >
+	   <img id ="1" name="Apollo 13" src="/static/images/Apollo 13.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+	    <td >
+	   <img id="2" name="Batman Forever" src="/static/images/Batman Forever.jpg"  onclick="get_name(this.id);" /><br>
+	   
+	   </td>
+		 <td >
+	   <img id ="3" name="Battleship" src="/static/images/Battleship.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+		  <td >
+	   <img id ="4" name="Pulp Fiction" src="/static/images/Pulp Fiction.jpg" onclick="get_name(this.id);"  /><br>
+	  
+	   </td>
+    </tr>
+	
+<tr>
+      <td >
+	   <img id ="5" name="The Dark Knight Rises" src="/static/images/The Dark Knight Rises.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+	    <td >
+	   <img id ="6" name="Phantom Lady" src="/static/images/Phantom Lady.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+		 <td >
+	   <img id ="7" name="Se7en" src="/static/images/Se7en.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+		  <td >
+	   <img id ="8" name="Star Wars" src="/static/images/Star Wars.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+    </tr>
+	
+	
+	
+	<tr>
+       <td >
+	   <img id ="9" name="The American President" src="/static/images/The American President.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+	    <td >
+	   <img id ="10" name="Grumpier Old Men" src="/static/images/Grumpier Old Men.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+		 <td >
+	   <img id ="11" name="Love Comes Softly" src="/static/images/Love Comes Softly.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+		  <td >
+	   <img id ="12" name="Toy Story" src="/static/images/Toy Story.jpg" onclick="get_name(this.id);"  /><br>
+	   
+	   </td>
+    </tr>
+
+</table>
+
+<hr>
+<hr>
+
+<hr>
+<hr>
+<form action="http://localhost:5000/recommended_movies" method="post" id="demo">
+ <p id="ind"> <input id="bla_bla" type="hidden" name="fname"  ></p><br>
+  <input type="hidden" value="submit">
+</form>
+
+<!-- write code for javascript what will fill the form -->
+  <script type="text/javascript">
+function get_name(clicked_id) {
+    var form = document.getElementById(clicked_id).name;
+    document.getElementById('bla_bla').value = form;
+    document.forms['demo'].submit();
+    <!--form.submit();-->
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

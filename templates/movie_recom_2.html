@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}"/>
+
+<table style="width:100%">
+<tr>
+    <th>fa</th>
+    <th><center><h1 style="color:white;">SEEkIt</h1></center></th> 
+    <th ><center>
+	<div class="dropdown" style="float:right;">
+  <button class="button circle">Menu</button>
+  <div class="dropdown-content">
+    <a href="{{url_for('profile')}}">About Us</a>
+    <a href="{{url_for('gallery')}}">Gallery</a>
+    <a href="#">Terms and Conditions</a>
+  </div>
+</div>
+	</center></th>
+  </tr>
+
+</table>
+
+
+
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    
+    <center><img src="/static/images/1.jpg" width="30%"></center>
+    
+  </div>
+
+  <div class="mySlides fade">
+    
+   <center> <img src="/static/images/2.jpg" width="30%" ></center>
+   
+  </div>
+
+  <div class="mySlides fade">
+    
+    <center><img src="/static/images/3.jpg" width="30%" ></center>
+    
+  </div>
+
+  <div class="mySlides fade">
+    
+    <center><img src="/static/images/4.jpg" width="30%"></center>
+  </div>
+ </div> 
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 1500); // Change image every 2 seconds
+}
+</script>
+</div> 
+<div >
+<center><a href="{{url_for('gallery')}}"><button class="button circle">START</button></center>
+</div>
+
+ 
+</body>
+</html>

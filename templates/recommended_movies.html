@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head>
+    <title>Movie Prediction API</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+   <body class="hr">
+   <hr>
+      <h1>Hi User</h1>
+	  <h1>Wellcome to our website:: Recommended movies are</h1>
+	<hr>
+	<hr>
+	<center>
+	{% if label %} 
+
+   <a href="http://www.netflix.com/">
+     {{ label | safe}}  
+ 
+ {% endif %}
+</center>
+   </body>
+</html>
